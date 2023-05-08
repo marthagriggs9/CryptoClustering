@@ -64,7 +64,13 @@ Use the following steps to cluster the cryptocurrencies for the best vlaue for `
   * Retriece the explained variance to determine how much information can be attributed to each principal component and then answer the following question in your notebook: 
     * What is the total explained variance of the three principal components?
   * Create a new DataFrame with the PCA data and set the "coin_id" index from the orginal DataFrame as the index for the new DataFrame. 
-
+  
+  ![image](https://user-images.githubusercontent.com/115905663/236952689-e1d788ba-3cfb-4f67-844c-11640b92c5a9.png)
+  
+  ![image](https://user-images.githubusercontent.com/115905663/236952780-54c77e86-68c9-412e-8bc2-bd99a3155b28.png)
+  
+  ![image](https://user-images.githubusercontent.com/115905663/236952843-e55b1e2f-6931-46e9-8813-354fddd008c1.png)
+  
 ## Find the Best Value for k Using the PCA Data
 Use the elbow method on the PCA data to find the best value for `k` using the following steps:
   * Create a list with the number of k values from 1 to 11.
@@ -76,6 +82,14 @@ Use the elbow method on the PCA data to find the best value for `k` using the fo
    * What is the best value for `k` when using PCA data?
    * Does it differ from the best k value found using the original data?
  
+  ![image](https://user-images.githubusercontent.com/115905663/236952931-29318303-d01b-45cb-8a5b-651e74ed7531.png)
+  
+  ![image](https://user-images.githubusercontent.com/115905663/236953017-36c248d3-c392-4f21-a488-43182e9575a6.png)
+  
+  ![image](https://user-images.githubusercontent.com/115905663/236953079-a2c4c06c-0802-47c8-a29f-8ab37cf77403.png)
+  
+  ![image](https://user-images.githubusercontent.com/115905663/236953156-590bae88-e937-4d3f-bb93-f49c193b0e31.png)
+
 ## Cluster Cryptocurrencies with K-means Using the PCA Data
 Use the following steps to cluster the cryptocurrencies for the best vlaue for `k` on the PCA data:
  * Initialize the K-means model with the best value for `k`. 
@@ -86,9 +100,33 @@ Use the following steps to cluster the cryptocurrencies for the best vlaue for `
   * Set the x-axis as "PC1" and the y-axis as "PC2". 
   * Color the graph points with the labeld found using K-means. 
   * Add the "coin_id" column in the `hover_cols` parameter to identify the cryptocurrency represented by each data point. 
- * Answer the following question:
-   * What is the impact of using fewer features to cluster the data using K-Means?
+ 
+ 
+ ![image](https://user-images.githubusercontent.com/115905663/236953296-7330b894-3f16-4bd0-b52f-d6bd9837f618.png)
+ 
+ ![image](https://user-images.githubusercontent.com/115905663/236953368-3597bd9c-160d-45c1-bb98-f9f5758994ad.png)
+ 
+ ![image](https://user-images.githubusercontent.com/115905663/236953441-8fbe4f8f-7248-48b6-8d43-b3a49e1ae38d.png)
+ 
+ 
 
+
+
+ 
 ## Visualize and Compare the Results
  * Create a composite plot by using hvPlot and the plus sign (`+`) operator to compare the elbow curve that you created from the original data with the one that your created from the PCA data. 
  * Create a composite plot by using hvPlot and the plus sign (`+`) operator to compare the cryptocurrency clusters that resulted from using the original data with those that resulted from the PCA data. 
+ * Answer the following question:
+   * What is the impact of using fewer features to cluster the data using K-Means?
+ 
+ ![image](https://user-images.githubusercontent.com/115905663/236953542-27efb694-1f5a-4b4c-a61c-d44ecbdd5be1.png)
+ 
+ ![image](https://user-images.githubusercontent.com/115905663/236953644-1afa83da-19bd-4c46-9600-c9658a2eb9ee.png)
+ 
+ ![image](https://user-images.githubusercontent.com/115905663/236953753-d3003a0f-1cd7-47a5-a163-07761118200f.png)
+ 
+ ![image](https://user-images.githubusercontent.com/115905663/236953839-f8eb4442-4906-41f7-9453-d16387c20d69.png)
+
+
+
+ 
