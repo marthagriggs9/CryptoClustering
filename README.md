@@ -7,9 +7,19 @@ In this challenge, you'll use your knowledge of Python and unsupervised learning
 2. Load the `crypto_market_data.csv` into a DataFrame
 3. Get the summary statistics and plot the data to see what the data looks like before proceeding. 
 
+![image](https://user-images.githubusercontent.com/115905663/236950988-a30b7d0a-5d4b-4219-a17e-65c8cb3c7310.png)
+
+![image](https://user-images.githubusercontent.com/115905663/236951094-eac3b7e3-ae25-4d76-9c83-b28f0f15fcbb.png)
+
+![image](https://user-images.githubusercontent.com/115905663/236951221-4a447970-3c37-453d-a854-ad623397fbee.png)
+
 ## Prepare the Data
 * Use the `StandardScaler()` module from `scikit-learn` to normalize the data from the CSV file.
 * Create a DataFrame with the scaled data and set the 'coin_id' index from the original DataFrame as the index for the new DataFrame. 
+
+![image](https://user-images.githubusercontent.com/115905663/236951348-c21c9710-fddd-4b3a-9a34-ed45f3c84c68.png)
+
+![image](https://user-images.githubusercontent.com/115905663/236951408-7e97fd6d-4bb5-4aef-b83e-04c3bb5a9b15.png)
 
 ## Find the Best Value for k Using the Original Scaled DataFrame
 Use the elbow method to find the best value for `k` using the following steps:
@@ -18,9 +28,18 @@ Use the elbow method to find the best value for `k` using the following steps:
   * Create a `for` loop to compute the intertia with each possible value of `k`. 
   * Create a dictionary with the data to plot the elbow curve. 
   * Plot a line chart with all the inertia values computed with the different values of `k` to visually identify the optimal value for `k`. 
+ 
+  ![image](https://user-images.githubusercontent.com/115905663/236951522-536a0d7a-73e0-4b2d-b682-b257a207d066.png)
+
+  ![image](https://user-images.githubusercontent.com/115905663/236951606-02c4fb97-4580-4091-aab5-a24b4f4860bb.png)
+
+  ![image](https://user-images.githubusercontent.com/115905663/236951688-e96a8311-d7b2-4416-aef4-53c17b3e38dd.png)
+
   * Answer the following question in your notebook: 
     * What is the best value for `k`?
   
+  ![image](https://user-images.githubusercontent.com/115905663/236951879-08f9881f-0a87-47df-b12f-1b94c0ec8441.png)
+
 ## Cluster Cryptocurrencies with K-means Using the Original Scaled Data
 Use the following steps to cluster the cryptocurrencies for the best vlaue for `k` on the original scaled data:
   * Initialize the K-means model with the best value for `k`. 
@@ -31,7 +50,15 @@ Use the following steps to cluster the cryptocurrencies for the best vlaue for `
     * Set the x-axis as "price_change_percentage_24h" and the y-axis as "price_change_percentage_7d". 
     * Color the graph points with the labels found using K-means. 
     * Add the "coin_id" column in the `hover_cols` parameter to identify the cryptocurrency represented by each data point. 
-    
+  
+  ![image](https://user-images.githubusercontent.com/115905663/236951959-e4076ee6-36c6-4919-9d37-6c3ff8a4a315.png)
+  
+  ![image](https://user-images.githubusercontent.com/115905663/236952059-682513d5-678a-4b29-b2c9-72ce5e699202.png)
+  
+  ![image](https://user-images.githubusercontent.com/115905663/236952261-60680a5c-bc76-4a61-b27c-bf6486150b9c.png)
+  
+  ![image](https://user-images.githubusercontent.com/115905663/236952338-28041558-df18-4d43-9157-0c0b6b31d93a.png)
+
  ## Optimize Clusters with Principal Component Analysis
   * Using the original scaled DataFrame, perform a PCA and reduce the features to three principal components. 
   * Retriece the explained variance to determine how much information can be attributed to each principal component and then answer the following question in your notebook: 
